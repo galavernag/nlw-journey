@@ -8,9 +8,12 @@
   "keywords": [],
   "author": "",
   "workspaces": [
-    "packages/*"
+    "apps/*"
   ],
   "license": "ISC",
   "description": "",
-  "packageManager": "npm@10.8.1"
+  "packageManager": "npm@10.8.1",
+  "dependencies": {
+    "turbo": "^2.0.6"
+  }
 }
