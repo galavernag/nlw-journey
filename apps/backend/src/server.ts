@@ -1,4 +1,5 @@
 import fastify from "fastify";
+import cors from "@fastify/cors";
 import { createTrips } from "./routes/create-trips";
 import {
   serializerCompiler,
@@ -6,6 +7,10 @@ import {
 } from "fastify-type-provider-zod";
 
 const app = fastify();
+
+app.register(cors, {
+  origin: "*",
+});
 
 app.setValidatorCompiler(validatorCompiler);
 app.setSerializerCompiler(serializerCompiler);
